@@ -1,0 +1,28 @@
+"WND_VAR_T_OFF":
+  valid_types: [api.Map, time_series]
+  parameter_name: "profile_limit_upper"
+  entity_class: "unit__to_node"
+  ines_balmorel_mapping:
+    "wind-off-FB-SP370-HH155_BSDK__elec_DK": "DK1_OFF_VRE-OFF_bottom_fixed_SP370-HH155_RG3"
+    "wind-off-FB-SP370-HH155_NSDK__elec_DK": "DK1_OFF_VRE-OFF_bottom_fixed_SP370-HH155_RG3"
+    "wind-off-FB-existing_NSDK__elec_DK": "DK1_OFF_OFF_Existing_RG1"
+    "wind-off-FO-SP370-HH155_BSDK__elec_DK": "DK1_OFF_VRE-OFF_bottom_fixed_SP370-HH155_RG1"
+    "wind-off-FO-SP370-HH155_NSDK__elec_DK": "DK1_OFF_VRE-OFF_bottom_fixed_SP370-HH155_RG2"
+
+#"WND_VAR_T_ON1":
+#  valid_types: [api.Map, time_series]
+#  parameter_name: "profile_limit_upper"
+#  entity_class: "unit__to_node"
+#  ines_balmorel_mapping:
+#    "wind-on-SP199-HH100_DK__elec_DK": "DK1_VRE-ONS_SP199-HH100_RG1"
+#    "wind-on-existing_DK__elec_DK": "DK1_ONS_Existing_RG1"
+
+"SOLE_VAR_T":
+  valid_types: [api.Map, time_series]
+  parameter_name: "profile_limit_upper"
+  entity_class: "unit__to_node"
+  suffix_rows: 4
+  ines_balmorel_mapping:
+    "solar-PV-existing_DK__elec_DK": "DK1_VRE-PV_Utility_scale_no_tracking_RG1"
+    "solar-PV-no-tracking_DK__elec_DK": "DK1_VRE-PV_Utility_scale_no_tracking_RG2"
+

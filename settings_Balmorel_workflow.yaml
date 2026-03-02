@@ -1,0 +1,29 @@
+balmorel_folder: "."
+solver: "cbc.opt"
+
+use_scenarios_as_folder_names: false
+#else
+scenario_name_balmorel_name_mapping:
+  "DK_base": "DK_base"
+
+#Here is a possibility to specify the temporal and spatial scope of the workflow.
+
+# Country list to be included in the workflow. If empty, all countries will be included.
+countries: [DENMARK]
+
+# List of years to be included in the workflow. If empty, all years will be included.
+years: [2030,2040,2050]
+
+# Seasons (weeks) to be included in the workflow. If empty, all seasons will be included.
+seasons: [S02,S15]
+
+# Timeperiods (hourly steps of the week) to be included in the workflow. If empty, all time periods will be included.
+time: [T001,T005,T009,T013,T017,T021]
+
+#Plotting settings
+plot_years: [2030,2040,2050]
+plot_commodities: [Electricity, 'Hydrogen']
+
+
+
+
