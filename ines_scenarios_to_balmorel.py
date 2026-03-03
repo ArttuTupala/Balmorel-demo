@@ -141,6 +141,7 @@ def create_new_folders(name, settings):
     scenario_folder = Path(balmorel_folder, name)
     scenario_model_folder = Path(scenario_folder, "model")
     Path(scenario_folder, "data").mkdir(parents=True, exist_ok=True)
+    Path(scenario_folder, "model").mkdir(parents=True, exist_ok=True)
     #clear folder of files
     for file_name in os.listdir(Path(scenario_folder, "data")):
         if file_name.endswith('.inc'):
@@ -152,8 +153,10 @@ def create_new_folders(name, settings):
                 print(f"Failed to delete {file_path}: {e}")
     #copy base files to new folder
     for item in base_model_folder.iterdir():
+        print(item.name)
         if item.is_file() and (item.name == settings["solver"] or item.name == "Balmorel.gms" or item.name == "cplex.op4"):
-            target_file = scenario_model_folder / item.name
+            #target_file = scenario_model_folder / item.name
+            target_file = Path(scenario_folder, "model", item.name)
             if not target_file.exists():
                 target_file.write_bytes(item.read_bytes())
     return scenario_folder
